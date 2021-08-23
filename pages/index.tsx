@@ -111,7 +111,7 @@ export default function Home() {
               <h1 className="text-xl">Answers</h1>
               <div className="px-5 w-full h-52 text-gray-500 bg-gray-100 rounded-lg py-3  space-y-3 scrollbar scrollbar-track-transparent scrollbar-thumb-gray-100 scrollbar-thin scrollbar-thumb-rounded-full">
                 <ul>
-                  {answers?.length &&
+                  {answers?.length ? (
                     answers.map((answer, index) => {
                       return (
                         <li
@@ -137,7 +137,14 @@ export default function Home() {
                           </div>
                         </li>
                       );
-                    })}
+                    })
+                  ) : (
+                    <li className=" flex flex-row justify-between">
+                      <p className="w-3/4">
+                        Sorry! The Model was unable to find answers.
+                      </p>
+                    </li>
+                  )}
                 </ul>
               </div>
             </div>
