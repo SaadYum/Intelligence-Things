@@ -104,7 +104,7 @@ export default function Home() {
               <input
                 ref={questionRef}
                 type="text"
-                placeholder="Ask Question here..."
+                placeholder="Ask Question here and press Enter..."
                 className="myInput"
                 onKeyPress={getAnswers}
               />
