@@ -112,9 +112,12 @@ export default function Home() {
               <div className="px-5 w-full h-52 text-gray-500 bg-gray-100 rounded-lg py-3  space-y-3 scrollbar scrollbar-track-transparent scrollbar-thumb-gray-100 scrollbar-thin scrollbar-thumb-rounded-full">
                 <ul>
                   {answers?.length &&
-                    answers.map((answer) => {
+                    answers.map((answer, index) => {
                       return (
-                        <li className=" flex flex-row justify-between">
+                        <li
+                          className=" flex flex-row justify-between"
+                          key={index + "answer"}
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5 transform translate-y-1"
